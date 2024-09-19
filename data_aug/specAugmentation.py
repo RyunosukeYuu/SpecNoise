@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import librosa
 import numpy as np
 import torch
@@ -92,12 +91,7 @@ if __name__ == '__main__':
     plt.xlabel('Time')
     plt.ylabel('Frequency')
     plt.show()
-=======
-import librosa
-import numpy as np
-import torch
-import torch.nn as nn
-from matplotlib import pyplot as plt
+
 
 class DropStripes(nn.Module):
     def __init__(self, dim, drop_width, stripes_num):
@@ -128,6 +122,7 @@ class DropStripes(nn.Module):
             elif self.dim == 3:
                 e[:, :, bgn:bgn + distance] = -40.0 / 255
 
+
 class SpecAugmentation(nn.Module):
     def __init__(self, time_drop_width, time_stripes_num, freq_drop_width, freq_stripes_num):
         super(SpecAugmentation, self).__init__()
@@ -138,4 +133,3 @@ class SpecAugmentation(nn.Module):
         x = self.time_dropper(input)
         x = self.freq_dropper(x)
         return x
->>>>>>> 9706377d6644a0a4fab142b1f67327a5bc8acac2

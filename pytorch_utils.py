@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import random
 
 import numpy as np
@@ -473,48 +472,3 @@ def specmix(x, y, prob, min_band_size, max_band_size, max_frequency_bands=3, max
         return x, y
     else:
         return x, y
-=======
-import random
-
-import numpy as np
-import torch
-import torchvision.transforms as T
-from torchaudio.functional import add_noise
-from torchvision import transforms
-from PIL import ImageFilter
-import librosa
-
-
-def do_mixup(x, y, alpha=1.0):
-    lam = np.random.beta(alpha, alpha)
-    batch_size = x.size(0)
-    index = torch.randperm(batch_size).to(x.device)
-    mixed_x = lam * x + (1 - lam) * x[index, :]
-    y_a, y_b = y, y[index]
-    return mixed_x, y_a, y_b, lam
-
-
-def specmix(x, y, prob, min_band_size, max_band_size, max_frequency_bands=3, max_time_bands=3):
-    if prob < 0:
-        raise ValueError('prob must be a positive value')
-
-    device = x.device
-
-    k = torch.rand(1, device=device)
-    if k > 1 - prob:
-        batch_size = x.size()[0]
-        batch_idx = torch.randperm(batch_size, device=device)
-        mask = torch.zeros((x.size()[0], x.size()[1], x.size()[2], x.size()[3]), device=device)
-        num_frequency_bands = random.randint(1, max_frequency_bands)
-        for i in range(1, num_frequency_bands):
-            mask = get_band(x, min_band_size, max_band_size, 'freq', mask)
-        num_time_bands = random.randint(1, max_time_bands)
-        for i in range(1, num_time_bands):
-            mask = get_band(x, min_band_size, max_band_size, 'time', mask)
-        lam = torch.sum(mask) / (x.size()[0] * x.size()[1] * x.size()[2] * x.size()[3])
-        x = x * (1 - mask) + x[batch_idx] * mask
-        y = y * (1 - lam) + y[batch_idx] * lam
-        return x, y
-    else:
-        return x, y
->>>>>>> 9706377d6644a0a4fab142b1f67327a5bc8acac2
