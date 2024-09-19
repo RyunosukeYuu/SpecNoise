@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6da9b648-9bdc-4162-80f0-956034942133" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataset_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dataset_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_aug/randomReplacementDropStripes.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_aug/randomReplacementDropStripes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_aug/specAugmentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_aug/specAugmentation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytorch_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytorch_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_mel.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_mel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_mfcc.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_mfcc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_multi_feature.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_multi_feature.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_stft.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_stft.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "RyunosukeYuu"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/RyunosukeYuu/SpecNoise.git",
+    "accountId": "1f762ba6-6091-4296-977b-8b2dd7dd4827"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2mISCvteuFpTWHbgZ4dLcvTrAxf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18968.29" />
+        <option value="bundled-python-sdk-f5635417b835-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18968.29" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="6da9b648-9bdc-4162-80f0-956034942133" name="更改" comment="" />
+      <created>1726762474042</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726762474042</updated>
+      <workItem from="1726762475822" duration="577000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
