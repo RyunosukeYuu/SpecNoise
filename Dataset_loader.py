@@ -81,10 +81,10 @@ class BirdSpectrogramLoader:
                 image = np.load(image_path) / 255.0
                 # Expand to three channels
                 if not self.is_multi_feature:
-                    image = np.expand_dims(image, axis=-1)  # Convert from (time, freq) to (time, freq, 1)
-                    image = np.repeat(image, 3, axis=-1)  # Convert from (time, freq, 1) to (time, freq, 3)
+                    image = np.expand_dims(image, axis=-1)
+                    image = np.repeat(image, 3, axis=-1)
 
-                image = np.transpose(image, (2, 0, 1))  # Convert from (time, freq, 3) to (3, time, freq)
+                image = np.transpose(image, (2, 0, 1))
                 data.append(image)
                 labels.append(label)
                 i += 1

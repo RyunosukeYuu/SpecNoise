@@ -161,7 +161,6 @@ if __name__ == "__main__":
     args = parse_args()
     set_seed(args.seed)
 
-    # Ensure checkpoint directory exists
     ensure_dir(args.checkpoint_dir)
 
     print("[INFO] Training parameters:")

@@ -172,8 +172,8 @@ if __name__ == "__main__":
     train_loader, test_loader = load_data(args.input, args.batch_size, args.seed)
     model = load_model(args.device)
     criterion = nn.CrossEntropyLoss()
-    # optimizer = optim.Adam(model.parameters(), lr=args.learning_rate, weight_decay=1e-4)
-    optimizer = optim.SGD(model.parameters(), lr=args.learning_rate, momentum=0.9, weight_decay=1e-4)
+    optimizer = optim.Adam(model.parameters(), lr=args.learning_rate, weight_decay=1e-4)
+    # optimizer = optim.SGD(model.parameters(), lr=args.learning_rate, momentum=0.9, weight_decay=1e-4)
     scheduler = CosineAnnealingLR(optimizer, T_max=args.train_epochs, eta_min=0, last_epoch=-1)
 
     final_epoch_info = train(model, train_loader, test_loader, criterion, optimizer, scheduler, args.device,

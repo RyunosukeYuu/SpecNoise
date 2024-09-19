@@ -405,23 +405,9 @@ def diverse_frequency_masking(spectrogram, num_masks=3, max_mask_pct=0.15):
 
 def dynamic_background_simulation(spectrogram, noise_spectrogram=None, dynamic_factor=0.00001,
                                   noise_level_range=(0, 0.00001)):
-    """
-    对输入的频谱图应用动态背景噪音增强，且噪音强度在一定范围内随机变化。
-
-    参数:
-    spectrogram (torch.Tensor): 输入的频谱图，形状为 (B, C, H, W)。
-    noise_spectrogram (torch.Tensor, optional): 用于叠加的背景噪音频谱图，形状为 (B, C, H, W)。
-                                                如果未提供，则生成随机噪音频谱图。
-    dynamic_factor (float): 控制动态变化的因子。
-    noise_level_range (tuple): 噪音强度的范围，随机选择一个值作为当前噪音的强度。
-
-    返回:
-    torch.Tensor: 经过动态背景噪音增强后的频谱图，形状为 (B, C, H, W)。
-    """
     device = spectrogram.device
     B, C, H, W = spectrogram.shape
 
-    # 在噪音强度范围内随机选择一个值
     noise_level = torch.FloatTensor(1).uniform_(*noise_level_range).item()
 
     if noise_spectrogram is None:
@@ -436,9 +422,9 @@ def dynamic_background_simulation(spectrogram, noise_spectrogram=None, dynamic_f
 def get_band(x, min_band_size, max_band_size, band_type, mask):
     assert band_type.lower() in ['freq', 'time'], f"band_type must be in ['freq', 'time']"
     if band_type.lower() == 'freq':
-        axis = 2  # 频率轴
+        axis = 2
     else:
-        axis = 3  # 时间轴
+        axis = 3
     band_size = random.randint(min_band_size, max_band_size)
     mask_start = random.randint(0, x.size()[axis] - band_size)
     mask_end = mask_start + band_size
@@ -449,11 +435,12 @@ def get_band(x, min_band_size, max_band_size, band_type, mask):
         mask[:, :, :, mask_start:mask_end] = 1
     return mask
 
+
 def specmix(x, y, prob, min_band_size, max_band_size, max_frequency_bands=3, max_time_bands=3):
     if prob < 0:
         raise ValueError('prob must be a positive value')
 
-    device = x.device  # 获取x的设备
+    device = x.device
 
     k = torch.rand(1, device=device)
     if k > 1 - prob:
